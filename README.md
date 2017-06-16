@@ -5,23 +5,20 @@ Comment penser code pour mieux écrire du code
 
 ### Qu'est ce que l'algorithme ?
 ### Les algorithmes célébres
- -  google
- -  facebook
- -  Trouver le chemin le plus court (path-finding)
+* Google, afficher des pages correspondantes à la recherche de l'utilisateur
+* Facebook, afficher des posts de vos amis et des posts de pourraient vous intéresser
+* Trouver le chemin le plus court (path-finding)
 
 ### Pour nous, l'algorithme, c'est quoi ?
 
-- Une façon de réfléchir et d'ecrire en pseudo-code
-- ...
-- Des ordres qu'on donne à une machine
+* Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème
+* Des ordres qu'on donne à une machine
 
-### Exercice 1 : La machine à qui vous donner des ordres :
+### La machine à qui vous donner des ordres :
 
 Imaginez une action simple que vous aimeriez faire executer à une machine. 
 
-Cette machine posséde tout ce qu'il faut pour le faire (des bras, des jambes, des yeux...). À vous d'imaginer votre machine selon l'action que vous souhaitez lui faire éxécuter).
-
-Mais elle n'a aucune intelligence. 
+Cette machine posséde tout ce qu'il faut pour le faire (des bras, des jambes, des yeux...), mais elle n'a aucune intelligence. 
 
 Il va falloir tout lui écrire précisement dans le bonne ordre pour qu'elle puisse l'executer. 
 
@@ -29,9 +26,9 @@ Cette machine a une mémoire. Elle peut y stocker tout ce que vous lui ordonner 
 
 Imaginez donc les ordres que vous donneriez à cette machine pour qu'elle arrive à executer l'action désirée :
 
- * les actions pour arriver à executer l'action désirée
- * les sous-actions pour arriver à executer ces actions
- * etc... si besoin, on decoupe en plus petites étapes
+ * les instructions à suivre pour arriver à executer l'action désirée
+ * les sous-actions pour arriver à executer à l'action
+ * si besoin, on decoupe en plus petites étapes
  * et il faut lui dire de stocker en mémoire les elements necessaires à l'étape suivante.
  
 NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'importe quoi !
@@ -52,7 +49,6 @@ NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'i
 - d'une machine avec des capacités matérielles définies
 
 ``` 
-   Exemples de description de machine :
    Ma machine a :
    * une mémoire (par défaut)
    * une camera
@@ -83,7 +79,9 @@ NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'i
   
 ```
 
-**ÉCRIVEZ LA SUITE D'ORDRE A DONNER A LA MACHINE DANS UN EDITEUR DE TEXTE**
+### Exercice 1 : Compter les doigts
+
+Ecrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter les doigts
 
 ### Exercice 2 : L'ordinateur à qui vous donner des ordres :
 
