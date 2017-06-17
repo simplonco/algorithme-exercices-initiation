@@ -1,39 +1,21 @@
 # algorithm-thinking
 Comment penser code pour mieux écrire du code
 
-## Présentation
+## Qu'est ce que l'algorithme ?
 
-### Qu'est ce que l'algorithme ?
-### Les algorithmes célébres
+Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème.
+
+
+## Les algorithmes célébres
+
 * Google, afficher des pages correspondantes à la recherche de l'utilisateur
 * Facebook, afficher des posts de vos amis et des posts de pourraient vous intéresser
 * Trouver le chemin le plus court (path-finding)
 
-### Pour nous, l'algorithme, c'est quoi ?
 
-* Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème
-* Des ordres qu'on donne à une machine
+### Mise en situation
 
-### La machine à qui vous donner des ordres :
-
-Imaginez une action simple que vous aimeriez faire executer à une machine. 
-
-Cette machine posséde tout ce qu'il faut pour le faire (des bras, des jambes, des yeux...), mais elle n'a aucune intelligence. 
-
-Il va falloir tout lui écrire précisement dans le bonne ordre pour qu'elle puisse l'executer. 
-
-Cette machine a une mémoire. Elle peut y stocker tout ce que vous lui ordonner de stocker à chaque etape. Il faut donc lui ordonner de stocker le resultat de chaque action afin de pouvoir utiliser ce resultat à l'etape suivante.
-
-Imaginez donc les ordres que vous donneriez à cette machine pour qu'elle arrive à executer l'action désirée :
-
- * les instructions à suivre pour arriver à executer l'action désirée
- * les sous-actions pour arriver à executer à l'action
- * si besoin, on decoupe en plus petites étapes
- * et il faut lui dire de stocker en mémoire les elements necessaires à l'étape suivante.
- 
-NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'importe quoi !
- 
-#### On a donc besoin :
+Pour un algorithme on a besoin : 
 
 - d'un but : une phrase qui commence par "je veux que la machine"
 
@@ -56,7 +38,7 @@ NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'i
    * un petit écran
 ``` 
 
-- d'une façon d'ecrire les ordres concise et rigoureuse. 
+- d'une façon d'ecrire les ordres concises et rigoureuses. 
 
 ``` 
   Exemple d'etapes 1 (mauvais algorithme) :
@@ -79,160 +61,195 @@ NB : pensez bien à décomposer les actions pour que la machine ne fasse pas n'i
   
 ```
 
-### Exercice 1 : Compter les doigts
+### Activité 1 : Compter les doigts
 
-Ecrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter les doigts
+En vous inspirant de qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter ses doigts aux formateurs et le faire écrire le résultat au tableau !
 
-### Exercice 2 : L'ordinateur à qui vous donner des ordres :
+## Comment l'utiliser concrètement pour le langage informatique
 
-Vos machines ont maintenant toutes un language commun :
+Nous allons utiliser des termes simples pour résoudre le problème afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisé. 
 
-- Chaque verbe ou action est une **function**
-- Chaque chose est un **object** (une string est un objet, un tableau est un objet)
-- Chaque nom lié à un **object** par une relation d'appartenance est une **property**
-- Chaque verbe qui peut être lié à un **object** par une relation d'appartenance est une **method** de cet **object**
-- Chaque **object** que vous devez garder en mémoire devient une **variable**. On peut aussi dire qu'elle est stocké comme **variable**
-- Chaque **function** que vous devez garder en mémoire devient une **variable**. On peut aussi dire qu'elle est stocké comme **variable**
-- Chaque liste de chose ou collection de chose est un **array** (tableau)
-- Si vous devez executer une action sur chaque element d'un tableau, vous dite que vous executer une **loop** (boucle, for, while, forEach, ...) sur ce tableau. A chaque itération, vous executez l'action sur l'element courant.
-- Un groupe d'action peut être représenté par une **function**
-``` 
+Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définit permet de se concentrer sur la résolution du problème et non sur comment 
+écrire la solution pour être compréhensible.
 
-------------
+### Les variables
 
-Exemple : Pré-pseudo code
+Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaines de caractères, etc.)
 
------- 
-Executer la methode regarde de camera avec en parametre main
-camera.regarde(main)
-------
-Executer la fonction move pour la camera avec comme cible la main
-move(camera, main)
-------
-Je stocke les objets plus grand que mes lunettes sous le nom listeObjects
-==>
-var listeObjects = recupererObjectsCacheur()
-------
-var move  = function (objet, cible) {
- ......
-}
-------
-var boite = getBox();
-var graines = recupererTouteLesGraines()
+Exemples: 
+* **a** : variable de type numérique
+* **nom*** : variable de type caractères
+* **visible** : variable de type Booléen
 
-pourChaqueGraineDans(graines) -> graine.bougeVers(boite)
-------
+Pour y stocker des informations (y affecter une valeur) nous écrirons de cette façon (syntaxe) : ```nom <- valeur```
 
-checkHuman(cameraImage)
-
-------
-
-var boxTemplate = getNetworkBoxTemplate()
-
-if exist(boxTemplate) 
- alors suiteDesOrdre()
-else
- stopExecutionDesOrdre()
- alert('probleme de network')
- 
-------
-
-// REVEIL DE FAUSTINO
-
-STEP1 
-waitFor (WeigthDetector.detetectBody() === true)
-STEP2 //body detected
-var wakeUpTime = calcultateWakUpTime(currentTime, +8)
-STEP3 
-waitFor (currentTime === wakeUpTime) // IL ATTEND QUE TE TEMPS PASSE
-STEP4 // currentTime === wakeUpTime
-ring()
-
---------
-
-Exemple en français :
-  1. var main = brasArticule.attrapeMain('droite')
-  2. camera.regarde(main)
-  3. var nombreTotalDoigts = 0 
-  3. main.doigts.forEach(doigt) { nombreTotalDoigts = nombreTotalDoigts + 1 }
-  4. console.log(nombreTotalDoigts)
-
-``` 
+Exemples: 
 
 ```
-Exemple en anglais :
-  1. var hand = mechanicalArm.getHand('right')
-  2. camera.lookAt(hand)
-  3. var fingerTotal = 0 
-  3. hand.fingers.forEach(finger) { fingerTotal = fingerTotal + 1 }
-  4. console.log(fingerTotal)
-
-``` 
-
-### Exercice 3 : FAIRE LE MEME EXERCICE POUR LA LISTE DE PLAT DU PROJET GERTRUDE
-
-Considérons un conteneur html vide :
-
-```
-<div class="container plats"></div>
-```
-et un tableau de plats
-```
-{
- plats: [
-   {
-    id: 1,
-    nom: 'plat1',
-    description: 'blablabla 1',
-    price: '12€',
-    selected: 0
-   },
-   {
-    id: 2,
-    nom: 'plat2',
-    description: 'blablabla 2',
-    price: '15€',
-    selected: 0
-   },
-   {
-    id: 3,
-    nom: 'plat3',
-    description: 'blablabla 3',
-    price: '10€',
-    selected: 0
-   }
- ]
-}
+a <- 56
+nom <- "Simplon"
+visible <- true
 ```
 
-Insérez dans le conteneur html autant d'elements html qu'il y en a de plats dans le tableau. 
+*Remarque : Les chaînes de caractères pouvant être un nombre, une lettre ou un caractère spécial. C'est pourquoi, par convention, nous utiliserons les guillemets pour identifier la valeur d'une variable comme chaînes de caractères.*
 
-Chaque element html doit afficher le nom, la description, le prix d'un element html.
-
-Chaque element doit comprendre un bouton "ajouter" qui servira ulterieurement.`
-
-#### Steps
-
-* RANDOM GROUPE DE 3 ! (random.org)
-* Faire un repo ou forker celui-là
-* Ecrire les etapes en pseudo-code dans le readme.md
-* Créer la page index.html et le fichier javascript
-* Ecrire le code javascript **en reprenant bien les noms de fonction du pseudo code**
-* "Push" votre travail sur le repo distant
-* Créer la github page et m'envoyer l'url
+Faire les [exercices](exercices/variables) suivants et les faire valider.
 
 
-### Exercice 4 : FAIRE LE MEME EXERCICE POUR LE PANIER DE GERTRUDE
+### Les conditions
+Les conditions permettent d'exécuter ou non certaines parties du programme.
 
- - Ecrire l'action : Ajouter au panier
- - Ecrire l'action : Supprimer du pannier
+Il existe 3 structures conditionnelles :
 
-#### Steps
+**La structure SI **
 
-* Ecrire les etapes en pseudo-code de chaque action dans le readme.md
-* Ecrire le code javascript **en reprenant bien les noms de fonction du pseudo code**
-* "Push" votre travail sur le repo distant
-* m'envoyer l'url de la github page
+Si la condition est vraie alors on exécute l'instruction
+
+Syntaxe (ou façon d'écrire) :
+```
+SI condition  ALORS
+    Instructions
+FINSI
+```
+
+exemple : 
+
+```
+SI sexe="M"  ALORS
+    Afficher ("Bienvenue Monsieur")
+FINSI
+```
+
+**La structure SI..SINON**
+Si la condition est vraie alors on exécute l'*Instruction A* sinon on exécute l'*Instruction B*
+
+Syntaxe :
+```
+SI condition  ALORS
+    Instructions A
+SINON
+    Instructions B
+FINSI
+```
+
+exemple : 
+
+```
+SI sexe="M"  ALORS
+    Afficher ("Bienvenue Monsieur")
+SINON
+    Afficher ("Bienvenue Madame")
+FINSI
+```
+
+**La structure CAS..DE**
+
+Suivant le cas d'une variable on effectue des instructions.
+
+Syntaxe (ou façon d'écrire):
+```
+CAS variable  DE
+    valeur1:  Instructions A
+    valeur2:  Instructions B
+    .......
+    Autre:     Instructions C
+FINCAS
+```
+
+exemple : 
+
+```
+CAS genre  DE
+    "Masculin":  Afficher ("Bienvenue Monsieur")
+    "Féminin" :  Afficher ("Bienvenue Madame")
+    AUTRE:       Afficher ("Bienvenue indéterminé")
+FINCAS
+```
+
+*Remarque: le terme *AUTRE* concernce tous les autres cas dont on n'a pas spécifié de valeurs*
+
+Faire les [exercices](exercices/conditions) suivants et les faire valider.
+
+
+### Les boucles ou itérations
+
+Elles permettent d'exécuter plusieurs fois les mêmes instructions.
+
+Il existe plusieurs structures itératives
+
+**La structure TANT QUE**
+
+Les instructions seront répétées tant que la condition est vraie
+
+Syntaxe :
+
+```
+TANT QUE condition
+    Instructions
+FTQ
+```
+
+*Remarque: FTQ veut dire FIN TANT QUE*
+
+Exemple : 
+
+```
+genre <- "Rien"
+TANT QUE genre <> "M" ET genre <> "F"
+    Afficher("Entrez votre genre (M/F)")
+    Entrer(genre)
+FTQ
+Afficher "Saisie acceptée"
+```
+
+*Remarque : le signe **<>** signifie **différent de***
+
+
+**La structure REPETER...JUSQU'A**
+
+Les instructions seront répétées jusqu'à ce que la condition soit vraie
+
+Syntaxe (ou façon d'écrire):
+
+```
+REPETER
+    Instructions
+JUSQU'A condition
+```
+
+Exemple : 
+
+```
+REPETER
+    Afficher("Voulez vous un café ? (O/N))
+    Entrer(reponse)
+JUSQU'A reponse="O" OU reponse="o" OU reponse="N" OU reponse="n"
+Afficher "Saisie acceptée"
+```
+
+La boucle ci-dessus s'effectuera tant que l'utilisateur n'a pas rentrée une des lettres suivantes : *O,o,N,n*
+
+**La structure POUR ... FINPOUR**
+
+Les instructions seront exécutées un nombre fini de pas.
+
+Syntaxe : 
+
+```
+POUR variable <- valeur initiale A valeur finale PAS p
+    Instructions
+FINPOUR
+```
+
+Exemple : 
+
+```
+POUR i<- 0 à 100 PAS 2
+    Afficher(i)
+FINPOUR
+```
+
+Cela affichera les nombres de 2 en 2 de 0 à 100
 
 ——————
 
