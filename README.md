@@ -1,17 +1,16 @@
-# algorithm-thinking
-Comment penser code pour mieux écrire du code
+# Algorithme
+
+Comment penser code pour mieux écrire du code.
 
 ## Qu'est ce que l'algorithme ?
 
 Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème.
 
-
 ## Les algorithmes célébres
 
-* Google, afficher des pages correspondantes à la recherche de l'utilisateur
-* Facebook, afficher des posts de vos amis et des posts de pourraient vous intéresser
+* Google, afficher des pages correspondantes à la recherche demandée par l'internaute
+* Facebook, afficher des posts de vos amis et des posts qui pourraient vous intéresser
 * Trouver le chemin le plus court (path-finding)
-
 
 ### Mise en situation
 
@@ -63,25 +62,25 @@ Pour un algorithme on a besoin :
 
 ### Activité 1 : Compter les doigts
 
-En vous inspirant de qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter ses doigts aux formateurs et le faire écrire le résultat au tableau !
+En vous inspirant de qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter dessiner une maison par le formateur !
 
 ## Comment l'utiliser concrètement pour le langage informatique
 
-Nous allons utiliser des termes simples pour résoudre le problème afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisé. 
+Nous allons utiliser des termes simples pour résoudre les problèmes afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisés. 
 
-Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définit permet de se concentrer sur la résolution du problème et non sur comment 
-écrire la solution pour être compréhensible.
+Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définit permet de se concentrer sur la résolution du problème et non sur comment écrire la solution pour être compréhensible.
 
 ### Les variables
 
-Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaines de caractères, etc.)
+Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaines de caractères, booléen, etc.)
 
 Exemples: 
+
 * **a** : variable de type numérique
-* **nom*** : variable de type caractères
+* **nom** : variable de type caractères
 * **visible** : variable de type Booléen
 
-Pour y stocker des informations (y affecter une valeur) nous écrirons de cette façon (syntaxe) : ```nom <- valeur```
+Pour y stocker des informations (y affecter une valeur) nous écrirons de cette façon (la syntaxe) : ```nom <- valeur```
 
 Exemples: 
 
@@ -91,21 +90,22 @@ nom <- "Simplon"
 visible <- true
 ```
 
-*Remarque : Les chaînes de caractères pouvant être un nombre, une lettre ou un caractère spécial. C'est pourquoi, par convention, nous utiliserons les guillemets pour identifier la valeur d'une variable comme chaînes de caractères.*
+*Remarque : Les chaînes de caractères pouvant être des nombres, des lettres ou des caractères spéciaux. C'est pourquoi, par convention, nous utiliserons les guillemets pour différencier les chaînes de caractères.*
 
-Faire les [exercices](exercices/variables) suivants et les faire valider.
-
+Faire les [exercices](exercices/variables.md) suivants et les faire valider.
 
 ### Les conditions
+
 Les conditions permettent d'exécuter ou non certaines parties du programme.
 
 Il existe 3 structures conditionnelles :
 
-**La structure SI **
+**La structure SI**
 
 Si la condition est vraie alors on exécute l'instruction
 
-Syntaxe (ou façon d'écrire) :
+Syntaxe (ou façon d'écrire):
+
 ```
 SI condition  ALORS
     Instructions
@@ -121,9 +121,11 @@ FINSI
 ```
 
 **La structure SI..SINON**
+
 Si la condition est vraie alors on exécute l'*Instruction A* sinon on exécute l'*Instruction B*
 
 Syntaxe :
+
 ```
 SI condition  ALORS
     Instructions A
@@ -136,9 +138,33 @@ exemple :
 
 ```
 SI sexe="M"  ALORS
-    Afficher ("Bienvenue Monsieur")
+    Afficher("Bienvenue Monsieur")
 SINON
-    Afficher ("Bienvenue Madame")
+    Afficher("Bienvenue Madame")
+FINSI
+```
+
+**Remarque**
+
+Les conditions peuvent être composées. 
+
+Comme par exemple, pour qu'une porte s'ouvre il faut qu'elle soit dévérouiller **ET** que quelqu'un actionne la poignée. 
+
+Ou, pour allumer la télé il faut appuyer sur le bouton de la télécommande **OU** sur le bouton sur la télé directement.
+
+exemple :
+
+```
+SI sexe="M" ET age > 18 ALORS
+    Afficher("Bonjour monsieur")
+SINON
+    Afficher("Bonjour jeune homme")
+FINSI
+
+SI sexe="M" OU sexe="F" ALORS
+    Afficher("Genre définit")
+SINON
+    Afficher("Genre non définit")
 FINSI
 ```
 
@@ -147,6 +173,7 @@ FINSI
 Suivant le cas d'une variable on effectue des instructions.
 
 Syntaxe (ou façon d'écrire):
+
 ```
 CAS variable  DE
     valeur1:  Instructions A
@@ -166,9 +193,9 @@ CAS genre  DE
 FINCAS
 ```
 
-*Remarque: le terme *AUTRE* concernce tous les autres cas dont on n'a pas spécifié de valeurs*
+*Remarque: le terme *AUTRE* concerne tous les autres cas dont on n'a pas spécifié de valeurs*
 
-Faire les [exercices](exercices/conditions) suivants et les faire valider.
+Faire les [exercices](exercices/conditions.md) suivants et les faire valider.
 
 
 ### Les boucles ou itérations
@@ -204,7 +231,6 @@ Afficher "Saisie acceptée"
 
 *Remarque : le signe **<>** signifie **différent de***
 
-
 **La structure REPETER...JUSQU'A**
 
 Les instructions seront répétées jusqu'à ce que la condition soit vraie
@@ -236,7 +262,7 @@ Les instructions seront exécutées un nombre fini de pas.
 Syntaxe : 
 
 ```
-POUR variable <- valeur initiale A valeur finale PAS p
+POUR variable <- valeur_initiale A valeur_finale PAS p
     Instructions
 FINPOUR
 ```
@@ -251,13 +277,62 @@ FINPOUR
 
 Cela affichera les nombres de 2 en 2 de 0 à 100
 
+Faire les [exercices](exercices/boucles.md) suivants et les faire valider.
+
+### Les tableaux
+
+Les variables ne peuvent contenir qu'*une seule valeur* à un instant donné.
+
+Si l'on veut entrer 50 notes il faudra alors 50 variables (ce qui est long) ou utiliser un  tableau (ce qui plus simple)
+
+Un tableau est une structure pouvant  contenir un grand nombre d'éléments à un instant donné.
+
+Voyez le tableau comme une grosse boîte avec des compartiments à l'intérieur pour ranger les éléments.
+
+Les tableaux portent un nom et peuvent contenir plusieurs valeurs. 
+
+syntaxe : 
+
+```
+nomTableau <- [valeur1, valeur2, valeur3]
+```
+
+Pour pouvoir accéder aux valeurs spécifique dans le tableau nous allons utilisé un nombre qui correspondra à la position de l'élément: *l'indice*.
+
+Exemple :
+
+```
+ville <- ["Saint-Denis","Saint-André", "Saint-Pierre"]
+```
+
+* Pour accéder à *Saint-Denis* qui se trouve à la **position O** : ```ville[0]```
+* Pour accéder à *Saint-André* qui se trouve à la **position 1** : ```ville[1]```
+* Pour accéder à *Saint-Pierre* qui se trouve à la **position 2** : ```ville[2]```
+
+Vous pouvez même changer la valeur d'un élément du tableau
+
+* Pour modifier ce qui se trouve à la **position O** : ```ville[0] <- "Paris"```
+* Pour modifier ce qui se trouve à la **position 1** : ```ville[1] <- "New York"```
+* Pour modifier ce qui se trouve à la **position 2** : ```ville[2] <- "Tokyo"```
+
+Vous l'avez compris, l'*indice* du tableau *commence à 0*.
+
+Quand on parle de la taille d'un tableau on parle du nombre total d'éléments qu'il contient. Par exemple, le tableau précédent, ```ville```, a une taille qui vaut 3.
+
+Faire les [exercices](exercices/tableaux.md) suivants et les faire valider.
+
+
+## A vous de jouer
+
+On va commencer tranquille par un petit minecraft :) cliquez sur ce [lien](https://studio.code.org/s/mc/stage/1/puzzle/1) et finissez les les 13 niveaux 
+
+Maintenant que ça commence à rentrer amusez-vous avec [blockly](https://blockly-games.appspot.com/)
+
 ——————
 
 ## Quelques références
+
 * https://www.grafikart.fr/formations/apprendre-algorithmique/
-* http://silentteacher.toxicode.fr/
-* https://www.kwyk.fr/algorithme/
 * https://www.tutorialspoint.com/data_structures_algorithms/data_structure_overview.htm
 * http://www.geeksforgeeks.org/fundamentals-of-algorithms/
-* https://pdf.k0nsl.org/C/Computer%20and%20Internet%20Collection/2015%20Computer%20and%20Internet%20Collection%20part%209/Packt%* 20Publishing%20Learning%20JavaScript%20Data%20Structures%20and%20Algorithms%20(2014).pdf
 * https://www.programiz.com/article/algorithm-programming
