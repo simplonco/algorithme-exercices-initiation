@@ -60,7 +60,7 @@ Pour un algorithme on a besoin :
 
 ```
 
-### Activité 1 : Compter les doigts
+### Activité 1 : Dessiner c'est gagné
 
 En vous inspirant de ce qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire  dessiner une maison par le formateur !
 
