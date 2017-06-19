@@ -168,6 +168,19 @@ SINON
 FINSI
 ```
 
+Vous pouvez mettre des priorités dans des conditions avec des parenthèses. La machine commencera par vérifier d'abord ce qu'il y a à l'intérieur
+des parenthèses puis le reste.
+
+exemple :
+
+```
+SI (sexe="M" ET age > 18) OU (sexe="F" ET age > 18) ALORS
+    Afficher("Bonjour jeune gens")
+SINON
+    Afficher("Bonjour")
+FINSI
+```
+
 **La structure CAS..DE**
 
 Suivant le cas d'une variable on effectue des instructions.
