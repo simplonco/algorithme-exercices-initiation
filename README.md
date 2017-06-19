@@ -1,22 +1,22 @@
 # Algorithme
 
-Comment penser code pour mieux écrire du code.
+Comment penser "code" pour mieux écrire du code.
 
 ## Qu'est ce que l'algorithme ?
 
-Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème.
+Une façon de réfléchir et d'écrire en "pseudo-code" pour résoudre un problème.
 
 ## Les algorithmes célébres
 
-* Google, afficher des pages correspondantes à la recherche demandée par l'internaute
-* Facebook, afficher des posts de vos amis et des posts qui pourraient vous intéresser
-* Trouver le chemin le plus court (path-finding)
+* Google, afficher des pages correspondantes à la recherche demandée par l'internaute.
+* Facebook, afficher des posts de vos amis et des posts qui pourraient vous intéresser.
+* Trouver le chemin le plus court (path-finding).
 
 ### Mise en situation
 
 Pour un algorithme on a besoin :
 
-- d'un but : une phrase qui commence par "je veux que la machine"
+- d'un but : une phrase qui commence par "je veux que la machine".
 
 ```
    Exemples de but :
@@ -37,48 +37,48 @@ Pour un algorithme on a besoin :
    * un petit écran
 ```
 
-- d'une façon d'ecrire les ordres concises et rigoureuses.
+- d'une façon d'écrire les ordres concis et rigoureux.
 
 ```
-  Exemple d'etapes 1 (mauvais algorithme) :
+  Exemple d'étapes 1 (mauvais algorithme) :
   1. Attraper et lever ma main droite jusqu'à camera
-  2. stocker en memoire cette main sous le nom : mainDroite
-  3. Reserver espace memoire pour un nombre sous le nom : nombreDeDoigts
+  2. Stocker en memoire cette main sous le nom : mainDroite
+  3. Réserver espace memoire pour un nombre sous le nom : nombreDeDoigts
   4. Regarder mainDroite
   5. Si nombre de doigt est 1, nombreDeDoigts = 1
   6. Si nombre de doigt est 2, nombreDeDoigts = 2
   ...
 
-  Exemple d'etapes 2 (meilleur algorithme) :
+  Exemple d'étapes 2 (meilleur algorithme) :
   1. Attraper et lever ma main droite jusqu'à camera
-  2. stocker en memoire cette main sous le nom : mainDroite
-  3. Reserver espace memoire pour un nombre sous le nom : nombreDeDoigts
-  4. Ecrire en memoire que nombreDeDoigts est égale à 0
+  2. Stocker en memoire cette main sous le nom : mainDroite
+  3. Réserver espace mémoire pour un nombre sous le nom : nombreDeDoigts
+  4. Écrire en mémoire que nombreDeDoigts est égale à 0
   5. Regarder avec la camera chaque doigt de **mainDroite** l'un après l'autre en allant de droite à gauche
-  6. A chaque doigt, ajouter 1 à la valeur de nombreDeDoigts
-  7. Quand il n'y a plus de doigt vers la gauche, montrer la valeur de nombreDeDoigts à l'ecran
+  6. À chaque doigt, ajouter 1 à la valeur de nombreDeDoigts
+  7. Quand il n'y a plus de doigt vers la gauche, montrer la valeur de nombreDeDoigts à l'écran
 
 ```
 
 ### Activité 1 : Compter les doigts
 
-En vous inspirant de qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire compter dessiner une maison par le formateur !
+En vous inspirant de ce qui a été fait ci-dessus, écrivez la suite d'ordre à donner à la machine dans un éditeur de texte pour faire  dessiner une maison par le formateur !
 
 ## Comment l'utiliser concrètement pour le langage informatique
 
 Nous allons utiliser des termes simples pour résoudre les problèmes afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisés.
 
-Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définit permet de se concentrer sur la résolution du problème et non sur comment écrire la solution pour être compréhensible.
+Nous allons les détailler, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définie permet de se concentrer sur la résolution du problème et non sur comment écrire la solution pour être compréhensible.
 
 ### Les variables
 
-Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaines de caractères, booléen, etc.)
+Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaîne de caractères, booléen, etc.)
 
 Exemples:
 
 * **a** : variable de type numérique
 * **nom** : variable de type caractères
-* **visible** : variable de type Booléen
+* **visible** : variable de type booléen
 
 Pour y stocker des informations (y affecter une valeur) nous écrirons de cette façon (la syntaxe) : ```nom <- valeur```
 
@@ -90,7 +90,7 @@ nom <- "Simplon"
 visible <- true
 ```
 
-*Remarque : Les chaînes de caractères pouvant être des nombres, des lettres ou des caractères spéciaux. C'est pourquoi, par convention, nous utiliserons les guillemets pour différencier les chaînes de caractères.*
+*Remarque : Les chaînes de caractères peuvent être des nombres, des lettres ou des caractères spéciaux. C'est pourquoi, par convention, nous utiliserons les guillemets pour différencier les chaînes de caractères.*
 
 Faire les [exercices](exercices/variables.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
@@ -112,7 +112,7 @@ SI condition  ALORS
 FINSI
 ```
 
-exemple :
+Exemple :
 
 ```
 SI sexe="M"  ALORS
@@ -134,7 +134,7 @@ SINON
 FINSI
 ```
 
-exemple :
+Exemple :
 
 ```
 SI sexe="M"  ALORS
@@ -148,11 +148,11 @@ FINSI
 
 Les conditions peuvent être composées.
 
-Comme par exemple, pour qu'une porte s'ouvre il faut qu'elle soit dévérouiller **ET** que quelqu'un actionne la poignée.
+Comme par exemple, pour qu'une porte s'ouvre il faut qu'elle soit dévérouillée **ET** que quelqu'un actionne la poignée.
 
 Ou, pour allumer la télé il faut appuyer sur le bouton de la télécommande **OU** sur le bouton sur la télé directement.
 
-exemple :
+Exemple :
 
 ```
 SI sexe="M" ET age > 18 ALORS
@@ -171,7 +171,7 @@ FINSI
 Vous pouvez mettre des priorités dans des conditions avec des parenthèses. La machine commencera par vérifier d'abord ce qu'il y a à l'intérieur
 des parenthèses puis le reste.
 
-exemple :
+Exemple :
 
 ```
 SI (sexe="M" ET age > 18) OU (sexe="F" ET age > 18) ALORS
@@ -196,7 +196,7 @@ CAS variable  DE
 FINCAS
 ```
 
-exemple :
+Exemple :
 
 ```
 CAS genre  DE
@@ -215,7 +215,7 @@ Faire les [exercices](exercices/conditions.md) suivants et les faire valider. D'
 
 Elles permettent d'exécuter plusieurs fois les mêmes instructions.
 
-Il existe plusieurs structures itératives
+Il existe plusieurs structures itératives :
 
 **La structure TANT QUE**
 
@@ -246,7 +246,7 @@ Afficher "Saisie acceptée"
 
 **La structure REPETER...JUSQU'A**
 
-Les instructions seront répétées jusqu'à ce que la condition soit vraie
+Les instructions seront répétées jusqu'à ce que la condition soit vraie.
 
 Syntaxe (ou façon d'écrire):
 
@@ -266,11 +266,11 @@ JUSQU'A reponse="O" OU reponse="o" OU reponse="N" OU reponse="n"
 Afficher "Saisie acceptée"
 ```
 
-La boucle ci-dessus s'effectuera tant que l'utilisateur n'a pas rentrée une des lettres suivantes : *O,o,N,n*
+La boucle ci-dessus s'effectuera tant que l'utilisateur n'a pas rentré une des lettres suivantes : *O,o,N,n*
 
 **La structure POUR ... FINPOUR**
 
-Les instructions seront exécutées un nombre fini de pas.
+Les instructions seront exécutées un "nombre fini de pas".
 
 Syntaxe :
 
@@ -288,7 +288,7 @@ POUR i<- 0 à 100 PAS 2
 FINPOUR
 ```
 
-Cela affichera les nombres de 2 en 2 de 0 à 100
+Cela affichera les nombres de 2 en 2 de 0 à 100.
 
 Faire les [exercices](exercices/boucles.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
@@ -296,21 +296,21 @@ Faire les [exercices](exercices/boucles.md) suivants et les faire valider. D'abo
 
 Les variables ne peuvent contenir qu'*une seule valeur* à un instant donné.
 
-Si l'on veut entrer 50 notes il faudra alors 50 variables (ce qui est long) ou utiliser un  tableau (ce qui plus simple)
+Si l'on veut entrer 50 notes il faudra alors 50 variables (ce qui est long) ou utiliser un  tableau (ce qui plus simple).
 
-Un tableau est une structure pouvant  contenir un grand nombre d'éléments à un instant donné.
+Un tableau est une structure pouvant contenir un grand nombre d'éléments à un instant donné.
 
 Voyez le tableau comme une grosse boîte avec des compartiments à l'intérieur pour ranger les éléments.
 
 Les tableaux portent un nom et peuvent contenir plusieurs valeurs. 
 
-syntaxe :
+Syntaxe :
 
 ```
 nomTableau <- [valeur1, valeur2, valeur3]
 ```
 
-Pour pouvoir accéder aux valeurs spécifique dans le tableau nous allons utilisé un nombre qui correspondra à la position de l'élément: *l'indice*.
+Pour pouvoir accéder aux valeurs spécifiques dans le tableau nous allons utiliser un nombre qui correspondra à la position de l'élément : *l'indice*.
 
 Exemple :
 
@@ -322,7 +322,7 @@ ville <- ["Saint-Denis","Saint-André", "Saint-Pierre"]
 * Pour accéder à *Saint-André* qui se trouve à la **position 1** : ```ville[1]```
 * Pour accéder à *Saint-Pierre* qui se trouve à la **position 2** : ```ville[2]```
 
-Vous pouvez même changer la valeur d'un élément du tableau
+Vous pouvez même changer la valeur d'un élément du tableau :
 
 * Pour modifier ce qui se trouve à la **position O** : ```ville[0] <- "Paris"```
 * Pour modifier ce qui se trouve à la **position 1** : ```ville[1] <- "New York"```
@@ -335,11 +335,11 @@ Quand on parle de la taille d'un tableau on parle du nombre total d'éléments q
 Faire les [exercices](exercices/tableaux.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
 
-## A vous de jouer
+## À vous de jouer
 
-On va commencer tranquille par un petit minecraft :) cliquez sur ce [lien](https://studio.code.org/s/mc/stage/1/puzzle/1) et finissez les les 13 niveaux
+On va commencer tranquillement par un petit minecraft :) cliquez sur ce [lien](https://studio.code.org/s/mc/stage/1/puzzle/1) et finissez les 13 niveaux.
 
-Maintenant que ça commence à rentrer amusez-vous avec [blockly](https://blockly-games.appspot.com/)
+Maintenant que ça commence à rentrer amusez-vous avec [blockly](https://blockly-games.appspot.com/).
 
 *IMPORTANT*:
 
