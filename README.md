@@ -341,6 +341,10 @@ On va commencer tranquillement par un petit minecraft :) cliquez sur ce [lien](h
 
 Maintenant que ça commence à rentrer amusez-vous avec [blockly](https://blockly-games.appspot.com/).
 
+Vous avez finit ? *not yet* :)
+
+Faites les [exercices](exercices/algo.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
+
 *IMPORTANT*:
 
 Quand ça devient un peu compliqué, utilisez une feuille et un stylo pour écrire l'algo puis testez le pour voir si ça marche !
