@@ -14,32 +14,32 @@ Une façon de réfléchir et d'ecrire en pseudo-code pour résoudre un problème
 
 ### Mise en situation
 
-Pour un algorithme on a besoin : 
+Pour un algorithme on a besoin :
 
 - d'un but : une phrase qui commence par "je veux que la machine"
 
-``` 
+```
    Exemples de but :
    Je veux que la machine :
    * compte mes doigts
    * cueille des pommes
    * écrive "bonjour" sur mon clavier
    * me reveille à 7h00
-``` 
+```
 
 - d'une machine avec des capacités matérielles définies
 
-``` 
+```
    Ma machine a :
    * une mémoire (par défaut)
    * une camera
    * un bras articulé
    * un petit écran
-``` 
+```
 
-- d'une façon d'ecrire les ordres concises et rigoureuses. 
+- d'une façon d'ecrire les ordres concises et rigoureuses.
 
-``` 
+```
   Exemple d'etapes 1 (mauvais algorithme) :
   1. Attraper et lever ma main droite jusqu'à camera
   2. stocker en memoire cette main sous le nom : mainDroite
@@ -48,8 +48,8 @@ Pour un algorithme on a besoin :
   5. Si nombre de doigt est 1, nombreDeDoigts = 1
   6. Si nombre de doigt est 2, nombreDeDoigts = 2
   ...
-  
-  Exemple d'etapes 2 (meilleur algorithme) : 
+
+  Exemple d'etapes 2 (meilleur algorithme) :
   1. Attraper et lever ma main droite jusqu'à camera
   2. stocker en memoire cette main sous le nom : mainDroite
   3. Reserver espace memoire pour un nombre sous le nom : nombreDeDoigts
@@ -57,7 +57,7 @@ Pour un algorithme on a besoin :
   5. Regarder avec la camera chaque doigt de **mainDroite** l'un après l'autre en allant de droite à gauche
   6. A chaque doigt, ajouter 1 à la valeur de nombreDeDoigts
   7. Quand il n'y a plus de doigt vers la gauche, montrer la valeur de nombreDeDoigts à l'ecran
-  
+
 ```
 
 ### Activité 1 : Compter les doigts
@@ -66,7 +66,7 @@ En vous inspirant de qui a été fait ci-dessus, écrivez la suite d'ordre à do
 
 ## Comment l'utiliser concrètement pour le langage informatique
 
-Nous allons utiliser des termes simples pour résoudre les problèmes afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisés. 
+Nous allons utiliser des termes simples pour résoudre les problèmes afin de traduire plus simplement dans le langage de la machine. Différents concepts seront utilisés.
 
 Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon d'écrire) à respecter. Une syntaxe bien définit permet de se concentrer sur la résolution du problème et non sur comment écrire la solution pour être compréhensible.
 
@@ -74,7 +74,7 @@ Nous allons les détaillés, décrire leur but et définir la syntaxe (la façon
 
 Les  variables sont des objets dont le contenu peut varier pendant l’exécution du programme. Les variables portent un nom et sont d’un type donné. Il y a plusieurs type de données (nombre, chaines de caractères, booléen, etc.)
 
-Exemples: 
+Exemples:
 
 * **a** : variable de type numérique
 * **nom** : variable de type caractères
@@ -82,7 +82,7 @@ Exemples:
 
 Pour y stocker des informations (y affecter une valeur) nous écrirons de cette façon (la syntaxe) : ```nom <- valeur```
 
-Exemples: 
+Exemples:
 
 ```
 a <- 56
@@ -112,7 +112,7 @@ SI condition  ALORS
 FINSI
 ```
 
-exemple : 
+exemple :
 
 ```
 SI sexe="M"  ALORS
@@ -134,7 +134,7 @@ SINON
 FINSI
 ```
 
-exemple : 
+exemple :
 
 ```
 SI sexe="M"  ALORS
@@ -146,9 +146,9 @@ FINSI
 
 **Remarque**
 
-Les conditions peuvent être composées. 
+Les conditions peuvent être composées.
 
-Comme par exemple, pour qu'une porte s'ouvre il faut qu'elle soit dévérouiller **ET** que quelqu'un actionne la poignée. 
+Comme par exemple, pour qu'une porte s'ouvre il faut qu'elle soit dévérouiller **ET** que quelqu'un actionne la poignée.
 
 Ou, pour allumer la télé il faut appuyer sur le bouton de la télécommande **OU** sur le bouton sur la télé directement.
 
@@ -183,7 +183,7 @@ CAS variable  DE
 FINCAS
 ```
 
-exemple : 
+exemple :
 
 ```
 CAS genre  DE
@@ -218,7 +218,7 @@ FTQ
 
 *Remarque: FTQ veut dire FIN TANT QUE*
 
-Exemple : 
+Exemple :
 
 ```
 genre <- "Rien"
@@ -243,7 +243,7 @@ REPETER
 JUSQU'A condition
 ```
 
-Exemple : 
+Exemple :
 
 ```
 REPETER
@@ -259,7 +259,7 @@ La boucle ci-dessus s'effectuera tant que l'utilisateur n'a pas rentrée une des
 
 Les instructions seront exécutées un nombre fini de pas.
 
-Syntaxe : 
+Syntaxe :
 
 ```
 POUR variable <- valeur_initiale A valeur_finale PAS p
@@ -267,7 +267,7 @@ POUR variable <- valeur_initiale A valeur_finale PAS p
 FINPOUR
 ```
 
-Exemple : 
+Exemple :
 
 ```
 POUR i<- 0 à 100 PAS 2
@@ -291,7 +291,7 @@ Voyez le tableau comme une grosse boîte avec des compartiments à l'intérieur 
 
 Les tableaux portent un nom et peuvent contenir plusieurs valeurs. 
 
-syntaxe : 
+syntaxe :
 
 ```
 nomTableau <- [valeur1, valeur2, valeur3]
@@ -324,9 +324,15 @@ Faire les [exercices](exercices/tableaux.md) suivants et les faire valider.
 
 ## A vous de jouer
 
-On va commencer tranquille par un petit minecraft :) cliquez sur ce [lien](https://studio.code.org/s/mc/stage/1/puzzle/1) et finissez les les 13 niveaux 
+On va commencer tranquille par un petit minecraft :) cliquez sur ce [lien](https://studio.code.org/s/mc/stage/1/puzzle/1) et finissez les les 13 niveaux
 
 Maintenant que ça commence à rentrer amusez-vous avec [blockly](https://blockly-games.appspot.com/)
+
+*IMPORTANT*:
+
+Quand ça devient un peu compliqué, utilisez une feuille et un stylo pour écrire l'algo puis testez le pour voir si ça marche !
+
+Il est important de passer par cette étape où on écrit d'abord sur le papier puis on revient sur la machine.
 
 ——————
 
