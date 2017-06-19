@@ -92,7 +92,7 @@ visible <- true
 
 *Remarque : Les chaînes de caractères pouvant être des nombres, des lettres ou des caractères spéciaux. C'est pourquoi, par convention, nous utiliserons les guillemets pour différencier les chaînes de caractères.*
 
-Faire les [exercices](exercices/variables.md) suivants et les faire valider.
+Faire les [exercices](exercices/variables.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
 ### Les conditions
 
@@ -195,7 +195,7 @@ FINCAS
 
 *Remarque: le terme *AUTRE* concerne tous les autres cas dont on n'a pas spécifié de valeurs*
 
-Faire les [exercices](exercices/conditions.md) suivants et les faire valider.
+Faire les [exercices](exercices/conditions.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
 
 ### Les boucles ou itérations
@@ -277,7 +277,7 @@ FINPOUR
 
 Cela affichera les nombres de 2 en 2 de 0 à 100
 
-Faire les [exercices](exercices/boucles.md) suivants et les faire valider.
+Faire les [exercices](exercices/boucles.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
 ### Les tableaux
 
@@ -319,7 +319,7 @@ Vous l'avez compris, l'*indice* du tableau *commence à 0*.
 
 Quand on parle de la taille d'un tableau on parle du nombre total d'éléments qu'il contient. Par exemple, le tableau précédent, ```ville```, a une taille qui vaut 3.
 
-Faire les [exercices](exercices/tableaux.md) suivants et les faire valider.
+Faire les [exercices](exercices/tableaux.md) suivants et les faire valider. D'abord par votre camarade d'à côté puis par les facilitateurs.
 
 
 ## A vous de jouer
