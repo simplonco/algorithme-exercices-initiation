@@ -2,6 +2,21 @@
 
 Résoudre les problèmes suivants en écrivant les solutions sur une feuille. 
 
+*Aide* :
+
+Pour les exercices suivants, considérez que vous pouvez accèder aux lettres d'une chaîne de caractère comme si c'était un tableau 
+
+Exemple : 
+
+Afficher chaque lettre, une par une, du mot "hey"
+
+```
+mot <- "hey"
+Afficher(mot[0])  
+Afficher(mot[1])
+Afficher(mot[2])
+```
+
 ## Exercice 1 
 
 Un des plus anciens systèmes de cryptographie (aisément déchiffrable) consiste à décaler les lettres d’un message pour le rendre illisible. Ainsi, les A deviennent des B, les B des C, etc. 
