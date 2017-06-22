@@ -29,6 +29,11 @@ Une amélioration (relative) du principe précédent consiste à opérer avec un
 
 Réalisez un algorithme sur le même principe que le précédent, mais qui demande en plus quel est le décalage à utiliser. Votre sens proverbial de l'élégance vous interdira bien sûr une série de vingt-six "Si...Alors"
 
+*Aide* :
+
+Afin de vous faciliter la tâche, vous pouvez utiliser le modulo :)
+
+
 ## Exercice 3 
 
 Une technique ultérieure de cryptographie consista à opérer non avec un décalage systématique, mais par une substitution aléatoire. Pour cela, on utilise un alphabet-clé, dans lequel les lettres se succèdent de manière désordonnée, par exemple :
